@@ -80,7 +80,7 @@
 #[macro_use]
 extern crate alloc;
 
-extern crate sgx_types;
+extern crate sgx_mini_types;
 
 mod seal;
 pub use self::seal::{SgxSealedData, SgxUnsealedData};

@@ -15,7 +15,7 @@
 // specific language governing permissions and limitations
 // under the License..
 
-extern crate sgx_types;
+extern crate sgx_mini_types;
 
 mod enclave;
 pub use enclave::*;

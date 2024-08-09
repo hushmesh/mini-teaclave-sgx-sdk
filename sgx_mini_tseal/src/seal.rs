@@ -32,8 +32,8 @@ use alloc::boxed::Box;
 use alloc::slice;
 use core::marker::PhantomData;
 use core::mem;
-use sgx_types::marker::ContiguousMemory;
-use sgx_types::*;
+use sgx_mini_types::marker::ContiguousMemory;
+use sgx_mini_types::*;
 
 /// The structure about the unsealed data.
 pub struct SgxUnsealedData<'a, T: 'a + ?Sized> {

@@ -20,7 +20,7 @@ use alloc::boxed::Box;
 use alloc::vec::Vec;
 use core::mem;
 use core::ptr;
-use sgx_types::*;
+use sgx_mini_types::*;
 
 /* intel sgx sdk 2.4 */
 const KEY_POLICY_KSS: uint16_t =

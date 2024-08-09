@@ -1,5 +1,5 @@
 [package]
-name = "sgx_urts"
+name = "sgx_mini_tseal"
 version = "1.1.6"
 authors = ["The Teaclave Authors"]
 repository = "https://github.com/apache/teaclave-sgx-sdk"
@@ -9,14 +9,11 @@ description = "Rust SGX SDK provides the ability to write Intel SGX applications
 edition = "2021"
 
 [lib]
-name = "sgx_urts"
+name = "sgx_mini_tseal"
 crate-type = ["rlib"]
 
 [features]
 default = []
-global_init = ["global_exit"]
-global_exit = ["global_init"]
 
 [dependencies]
-sgx_types = { path = "../sgx_types" }
-libc = "0.2"
+sgx_mini_types = { path = "../sgx_mini_types" }

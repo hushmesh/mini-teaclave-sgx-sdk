@@ -23,8 +23,8 @@ use alloc::boxed::Box;
 use alloc::slice;
 use core::marker::PhantomData;
 use core::mem;
-use sgx_types::marker::ContiguousMemory;
-use sgx_types::*;
+use sgx_mini_types::marker::ContiguousMemory;
+use sgx_mini_types::*;
 
 /// The structure about sealed data, for authenticate and verify.
 pub struct SgxMacAadata<'a, T: 'a + ?Sized> {

@@ -1,7 +1,7 @@
 [workspace]
 members = [
-    "sgx_tseal",
-    "sgx_types",
-    "sgx_urts"
+    "sgx_mini_tseal",
+    "sgx_mini_types",
+    "sgx_mini_urts"
 ]
 resolver = "2"

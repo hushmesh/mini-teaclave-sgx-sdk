@@ -15,7 +15,7 @@
 // specific language governing permissions and limitations
 // under the License..
 
-use sgx_types::*;
+use sgx_mini_types::*;
 use std::ffi::{CStr, CString};
 use std::io;
 use std::os::unix::ffi::OsStrExt;

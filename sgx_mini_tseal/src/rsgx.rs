@@ -2,8 +2,8 @@
 use core::arch::asm;
 use core::mem;
 use core::ptr;
-use sgx_types::marker::*;
-use sgx_types::*;
+use sgx_mini_types::marker::*;
+use sgx_mini_types::*;
 
 pub(crate) fn rsgx_raw_is_within_enclave(addr: *const u8, size: usize) -> bool {
     let ret = unsafe { sgx_is_within_enclave(addr as *const c_void, size) };
