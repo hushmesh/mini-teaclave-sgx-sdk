@@ -1,3 +1,5 @@
+#[cfg(target_arch = "x86_64")]
+use core::arch::asm;
 use core::mem;
 use sgx_mini_types::marker::ContiguousMemory;
 use sgx_mini_types::*;
