@@ -1,6 +1,7 @@
 [workspace]
 members = [
     "sgx_mini_tdh",
+    "sgx_mini_tse",
     "sgx_mini_tseal",
     "sgx_mini_types",
     "sgx_mini_urts"
