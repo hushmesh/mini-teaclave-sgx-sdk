@@ -10,8 +10,7 @@ extern "C" {
     pub fn abort() -> !;
 }
 
-#[panic_handler]
-pub fn panic(info: &PanicInfo) -> ! {
+pub fn panic_handler(info: &PanicInfo) -> ! {
     error!("Panic: {}", info);
     log::logger().flush();
     unsafe {
