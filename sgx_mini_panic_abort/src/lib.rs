@@ -11,7 +11,7 @@ extern "C" {
 }
 
 #[panic_handler]
-fn panic(info: &PanicInfo) -> ! {
+pub fn panic(info: &PanicInfo) -> ! {
     error!("Panic: {}", info);
     log::logger().flush();
     unsafe {
