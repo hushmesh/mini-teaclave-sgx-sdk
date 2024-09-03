@@ -1,5 +1,6 @@
 [workspace]
 members = [
+    "sgx_mini_alloc",
     "sgx_mini_panic_abort",
     "sgx_mini_tdh",
     "sgx_mini_tse",
