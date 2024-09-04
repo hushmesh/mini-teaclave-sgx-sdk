@@ -35,6 +35,8 @@ mod dh;
 pub use self::dh::*;
 
 mod crypto;
+pub use self::crypto::*;
+
 mod ecp;
 mod memeq;
 mod rsgx;
