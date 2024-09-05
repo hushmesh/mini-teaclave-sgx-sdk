@@ -578,6 +578,24 @@ impl SgxShaHandle {
     }
 
     ///
+    /// update_slice performs a SHA256 hash over the input dataset provided.
+    ///
+    pub fn update_slice<T>(&self, src: &[T]) -> SgxError
+    where
+        T: Copy + ContiguousMemory,
+    {
+        if !self.initflag.get() {
+            return Err(sgx_status_t::SGX_ERROR_INVALID_STATE);
+        }
+
+        let ret = rsgx_sha256_update_slice(src, *self.handle.borrow());
+        match ret {
+            sgx_status_t::SGX_SUCCESS => Ok(()),
+            _ => Err(ret),
+        }
+    }
+
+    ///
     /// get_hash obtains the SHA256 hash after the final dataset has been processed.
     ///
     /// # Description

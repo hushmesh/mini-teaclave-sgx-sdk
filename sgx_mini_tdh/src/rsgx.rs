@@ -249,6 +249,23 @@ where
     unsafe { sgx_sha256_update(src as *const _ as *const u8, size as u32, sha_handle) }
 }
 
+pub(crate) fn rsgx_sha256_update_slice<T>(
+    src: &[T],
+    sha_handle: sgx_sha_state_handle_t,
+) -> sgx_status_t
+where
+    T: Copy + ContiguousMemory,
+{
+    let size = mem::size_of_val(src);
+    if size == 0 {
+        return sgx_status_t::SGX_ERROR_INVALID_PARAMETER;
+    }
+    if size > u32::MAX as usize {
+        return sgx_status_t::SGX_ERROR_INVALID_PARAMETER;
+    }
+    unsafe { sgx_sha256_update(src.as_ptr() as *const u8, size as u32, sha_handle) }
+}
+
 pub(crate) fn rsgx_sha256_get_hash(
     sha_handle: sgx_sha_state_handle_t,
     hash: &mut sgx_sha256_hash_t,
