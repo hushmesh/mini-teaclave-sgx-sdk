@@ -15,4 +15,3 @@ name = "sgx_mini_alloc"
 default = []
 
 [dependencies]
-sgx_mini_types = { path = "../sgx_mini_types" }
