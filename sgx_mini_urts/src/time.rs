@@ -15,10 +15,24 @@
 // specific language governing permissions and limitations
 // under the License..
 
-extern crate libc;
-extern crate sgx_mini_types;
+use libc::{self, c_int, clockid_t, timespec};
+use std::io::Error;
 
-pub mod time;
-
-mod enclave;
-pub use enclave::*;
+#[no_mangle]
+pub extern "C" fn u_clock_gettime_ocall(
+    error: *mut c_int,
+    clk_id: clockid_t,
+    tp: *mut timespec,
+) -> c_int {
+    let mut errno = 0;
+    let ret = unsafe { libc::clock_gettime(clk_id, tp) };
+    if ret < 0 {
+        errno = Error::last_os_error().raw_os_error().unwrap_or(0);
+    }
+    if !error.is_null() {
+        unsafe {
+            *error = errno;
+        }
+    }
+    ret
+}
