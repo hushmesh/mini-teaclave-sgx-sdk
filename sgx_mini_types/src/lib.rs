@@ -79,3 +79,4 @@ pub use self::function::*;
 pub mod cpu_feature;
 pub mod marker;
 pub mod metadata;
+pub mod thread;
