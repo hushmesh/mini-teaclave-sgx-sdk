@@ -46,6 +46,7 @@ where
     f();
 }
 
-pub fn rsgx_unit_test_end() {
+pub fn rsgx_unit_test_end() -> usize {
     info!("tests passed");
+    0
 }
