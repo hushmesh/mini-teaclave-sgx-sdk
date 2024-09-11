@@ -2,6 +2,9 @@
 
 use core::ffi::c_char;
 use core::ffi::c_int;
+use core::ffi::c_ssize_t;
+use core::ffi::c_uint;
+use core::ffi::c_void;
 use core::usize;
 
 #[no_mangle]
@@ -318,5 +321,227 @@ pub extern "C" fn u_open_ocall(
     _pathname: *const c_char,
     _flags: c_int,
 ) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_mprotect_ocall(
+    _error: *mut c_int,
+    _addr: *mut c_void,
+    _length: usize,
+    _prot: c_int,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_msync_ocall(
+    _error: *mut c_int,
+    _addr: *mut c_void,
+    _length: usize,
+    _flags: c_int,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_munmap_ocall(_error: *mut c_int, _start: *mut c_void, _length: isize) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_mmap_ocall(
+    _error: *mut c_int,
+    _start: *mut c_void,
+    _length: usize,
+    _prot: c_int,
+    _flags: c_int,
+    _fd: c_int,
+    _offset: i64,
+) -> *mut c_void {
+    core::ptr::null_mut()
+}
+
+#[no_mangle]
+pub extern "C" fn u_free_ocall(_p: *mut c_void) {}
+
+#[no_mangle]
+pub extern "C" fn u_malloc_ocall(_error: *mut c_int, _size: usize) -> *mut c_void {
+    core::ptr::null_mut()
+}
+
+#[no_mangle]
+pub extern "C" fn u_futimens_ocall(_error: *mut c_int, _fd: c_int, _times: *const c_char) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_eventfd_ocall(_error: *mut c_int, _initval: c_uint, _flags: c_int) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_dup_ocall(_error: *mut c_int, _oldfd: c_int) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_isatty_ocall(_error: *mut c_int, _fd: c_int) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_close_ocall(_error: *mut c_int, _fd: c_int) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_ioctl_arg1_ocall(
+    _error: *mut c_int,
+    _fd: c_int,
+    _request: c_int,
+    _arg: *mut c_int,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_ioctl_arg0_ocall(_error: *mut c_int, _fd: c_int, _request: c_int) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_fcntl_arg1_ocall(
+    _error: *mut c_int,
+    _fd: c_int,
+    _cmd: c_int,
+    _arg: c_int,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_fcntl_arg0_ocall(_error: *mut c_int, _fd: c_int, _cmd: c_int) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_splice_ocall(
+    _error: *mut c_int,
+    _fd_in: c_int,
+    _off_in: *mut c_char,
+    _fd_out: c_int,
+    _off_out: *mut c_char,
+    _len: isize,
+    _flags: c_uint,
+) -> isize {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_copy_file_range_ocall(
+    _error: *mut c_int,
+    _fd_in: c_int,
+    _off_in: *mut c_char,
+    _fd_out: c_int,
+    _off_out: *mut c_char,
+    _len: isize,
+    _flags: c_uint,
+) -> isize {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_sendfile_ocall(
+    _error: *mut c_int,
+    _out_fd: c_int,
+    _in_fd: c_int,
+    _offset: *mut c_char,
+    _count: isize,
+) -> isize {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_pwritev64_ocall(
+    _error: *mut c_int,
+    _fd: c_int,
+    _iov: *const c_char,
+    _iovcnt: c_int,
+    _offset: i64,
+) -> isize {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_writev_ocall(
+    _error: *mut c_int,
+    _fd: c_int,
+    _iov: *const c_char,
+    _iovcnt: c_int,
+) -> isize {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_pwrite64_ocall(
+    _error: *mut c_int,
+    _fd: c_int,
+    _buf: *const c_void,
+    _count: isize,
+    _offset: i64,
+) -> isize {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_write_ocall(
+    _error: *mut c_int,
+    _fd: c_int,
+    _buf: *const c_void,
+    _count: isize,
+) -> isize {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_preadv64_ocall(
+    _error: *mut c_int,
+    _fd: c_int,
+    _iov: *const c_char,
+    _iovcnt: c_int,
+    _offset: i64,
+) -> isize {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_readv_ocall(
+    _error: *mut c_int,
+    _fd: c_int,
+    _iov: *const c_char,
+    _iovcnt: c_int,
+) -> isize {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_pread64_ocall(
+    _error: *mut c_int,
+    _fd: c_int,
+    _buf: *mut c_void,
+    _count: isize,
+    _offset: i64,
+) -> isize {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_read_ocall(
+    _error: *mut c_int,
+    _fd: c_int,
+    _buf: *mut c_void,
+    _count: isize,
+) -> isize {
     0
 }
