@@ -42,3 +42,40 @@ pub extern "C" fn u_getcwd_ocall(
 ) -> *mut c_char {
     core::ptr::null_mut()
 }
+
+#[no_mangle]
+pub extern "C" fn u_getpwuid_r_ocall(
+    _uid: u32,
+    _pwd: *mut c_char,
+    _buf: *mut c_char,
+    _buflen: usize,
+    _passwd_result: *mut *mut c_char,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_chdir_ocall(_error: *mut c_int, _dir: *const c_char) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_fstatat64_ocall(
+    _error: *mut c_int,
+    _dirfd: c_int,
+    _pathname: *const c_char,
+    _buf: *mut c_char,
+    _flags: c_int,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_dirfd_ocall(_error: *mut c_int, _dirp: *mut c_char) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_closedir_ocall(_error: *mut c_int, _dirp: *mut c_char) -> c_int {
+    0
+}
