@@ -26,10 +26,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "sgx_mini_shim"
-version = "1.1.6"
-
-[[package]]
 name = "sgx_mini_tdh"
 version = "1.1.6"
 dependencies = [
@@ -51,6 +47,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "sgx_mini_tshim"
+version = "1.1.6"
+
+[[package]]
 name = "sgx_mini_types"
 version = "1.1.6"
 
@@ -61,3 +61,7 @@ dependencies = [
  "libc",
  "sgx_mini_types",
 ]
+
+[[package]]
+name = "sgx_mini_ushim"
+version = "1.1.6"

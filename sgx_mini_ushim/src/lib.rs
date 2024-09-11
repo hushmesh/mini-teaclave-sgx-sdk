@@ -577,6 +577,3 @@ pub extern "C" fn u_thread_wait_event_ocall(
 pub extern "C" fn u_thread_set_event_ocall(_error: *mut c_int, _tcs: *const c_void) -> c_int {
     0
 }
-
-#[no_mangle]
-pub extern "C" fn t_global_init_ecall(_id: u64, _path: *const u8, _len: usize) {}

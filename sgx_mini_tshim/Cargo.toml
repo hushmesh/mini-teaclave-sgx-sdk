@@ -1,6 +1,6 @@
 [package]
 authors = ["The Teaclave Authors"]
-name = "sgx_mini_shim"
+name = "sgx_mini_tshim"
 version = "1.1.6"
 repository = "https://github.com/apache/teaclave-sgx-sdk"
 license-file = "LICENSE"
@@ -9,7 +9,7 @@ description = "Rust SGX SDK provides the ability to write Intel SGX applications
 edition = "2021"
 
 [lib]
-name = "sgx_mini_shim"
+name = "sgx_mini_tshim"
 
 [features]
 default = []

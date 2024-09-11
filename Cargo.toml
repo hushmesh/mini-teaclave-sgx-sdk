@@ -2,11 +2,12 @@
 members = [
     "sgx_mini_alloc",
     "sgx_mini_panic_abort",
-    "sgx_mini_shim",
     "sgx_mini_tdh",
+    "sgx_mini_tshim",
     "sgx_mini_tse",
     "sgx_mini_tseal",
     "sgx_mini_types",
+    "sgx_mini_ushim",
     "sgx_mini_urts"
 ]
 resolver = "2"
