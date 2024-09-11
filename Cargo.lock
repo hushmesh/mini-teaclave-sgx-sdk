@@ -26,6 +26,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "sgx_mini_shim"
+version = "1.1.6"
+
+[[package]]
 name = "sgx_mini_tdh"
 version = "1.1.6"
 dependencies = [
