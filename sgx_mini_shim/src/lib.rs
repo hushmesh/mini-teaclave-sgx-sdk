@@ -182,3 +182,141 @@ pub extern "C" fn u_link_ocall(
 pub extern "C" fn u_unlink_ocall(_error: *mut c_int, _pathname: *const c_char) -> c_int {
     0
 }
+
+#[no_mangle]
+pub extern "C" fn u_fchmod_ocall(_error: *mut c_int, _fd: c_int, _mode: u16) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_fdatasync_ocall(_error: *mut c_int, _fd: c_int) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_fsync_ocall(_error: *mut c_int, _fd: c_int) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_truncate64_ocall(
+    _error: *mut c_int,
+    _path: *const c_char,
+    _length: i64,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_truncate_ocall(
+    _error: *mut c_int,
+    _path: *const c_char,
+    _length: i64,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_ftruncate64_ocall(_error: *mut c_int, _fd: c_int, _length: i64) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_ftruncate_ocall(_error: *mut c_int, _fd: c_int, _length: i64) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_lseek64_ocall(
+    _error: *mut c_int,
+    _fd: c_int,
+    _offset: i64,
+    _whence: c_int,
+) -> i64 {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_lseek_ocall(
+    _error: *mut c_int,
+    _fd: c_int,
+    _offset: i64,
+    _whence: c_int,
+) -> i64 {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_lstat64_ocall(
+    _error: *mut c_int,
+    _path: *const c_char,
+    _buf: *mut c_char,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_lstat_ocall(
+    _error: *mut c_int,
+    _path: *const c_char,
+    _buf: *mut c_char,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_stat64_ocall(
+    _error: *mut c_int,
+    _path: *const c_char,
+    _buf: *mut c_char,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_stat_ocall(
+    _error: *mut c_int,
+    _path: *const c_char,
+    _buf: *mut c_char,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_fstat64_ocall(_error: *mut c_int, _fd: c_int, _buf: *mut c_char) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_fstat_ocall(_error: *mut c_int, _fd: c_int, _buf: *mut c_char) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_openat_ocall(
+    _error: *mut c_int,
+    _dirfd: c_int,
+    _pathname: *const c_char,
+    _flags: c_int,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_open64_ocall(
+    _error: *mut c_int,
+    _path: *const c_char,
+    _oflag: c_int,
+    _mode: c_int,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_open_ocall(
+    _error: *mut c_int,
+    _pathname: *const c_char,
+    _flags: c_int,
+) -> c_int {
+    0
+}
