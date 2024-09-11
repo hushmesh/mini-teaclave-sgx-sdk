@@ -51,6 +51,13 @@ name = "sgx_mini_tshim"
 version = "1.1.6"
 
 [[package]]
+name = "sgx_mini_tunittest"
+version = "1.1.6"
+dependencies = [
+ "log",
+]
+
+[[package]]
 name = "sgx_mini_types"
 version = "1.1.6"
 

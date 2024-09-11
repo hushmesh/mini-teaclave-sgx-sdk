@@ -6,6 +6,7 @@ members = [
     "sgx_mini_tshim",
     "sgx_mini_tse",
     "sgx_mini_tseal",
+    "sgx_mini_tunittest",
     "sgx_mini_types",
     "sgx_mini_ushim",
     "sgx_mini_urts"
