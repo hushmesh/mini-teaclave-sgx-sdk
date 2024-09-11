@@ -2,7 +2,6 @@
 
 use core::ffi::c_char;
 use core::ffi::c_int;
-use core::ffi::c_ssize_t;
 use core::ffi::c_uint;
 use core::ffi::c_void;
 use core::usize;
