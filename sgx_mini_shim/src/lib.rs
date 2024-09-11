@@ -544,3 +544,36 @@ pub extern "C" fn u_read_ocall(
 ) -> isize {
     0
 }
+
+#[no_mangle]
+pub extern "C" fn u_thread_setwait_events_ocall(
+    _error: *mut c_int,
+    _waiter_tcs: *const c_void,
+    _self_tcs: *const c_void,
+    _timeout: *const c_char,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_thread_set_multiple_events_ocall(
+    _error: *mut c_int,
+    _tcss: *const *const c_void,
+    _total: c_int,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_thread_wait_event_ocall(
+    _error: *mut c_int,
+    _tcs: *const c_void,
+    _timeout: *const c_char,
+) -> c_int {
+    0
+}
+
+#[no_mangle]
+pub extern "C" fn u_thread_set_event_ocall(_error: *mut c_int, _tcs: *const c_void) -> c_int {
+    0
+}
